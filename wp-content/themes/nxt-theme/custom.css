@@ -1,0 +1,21 @@
+/* Front Page Template for Full Width Sections
+-------------------------------------------- */
+
+.home .site-inner {
+	max-width: none;
+	padding-top: 0;
+}
+
+.entry {
+background-color:transparent;
+}
+
+.full-width .site-inner, .site-inner {
+max-width: none;
+}
+
+@media only screen and (max-width: 1023px) {
+.full-width .site-inner { padding-left: 0%; padding-right: 0%; }
+.site-inner{max-width: none;}
+}
+

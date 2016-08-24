@@ -1,21 +1,131 @@
+/*keyframe animations. Usage: @include keyframes(slide-down) {0% { opacity: 1; }90% { opacity: 0; }}
+.element {width: 100px;height: 100px;background: black;@include animation('slide-down 5s 3');}*/
+/*Variables */
+/*=====basic styles ======*/
+a {
+  color: #ee8322;
+  text-decoration: none; }
+  a:hover {
+    color: #cd6a10; }
+
 /* Front Page Template for Full Width Sections
 -------------------------------------------- */
-
 .home .site-inner {
-	max-width: none;
-	padding-top: 0;
-}
+  max-width: none;
+  padding-top: 90px; }
+
+.home .entry {
+  background-image: url(images/bw-trees.jpg);
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0px -106px;
+  margin: 0;
+  min-height: 400px; }
 
 .entry {
-background-color:transparent;
-}
+  background-color: transparent; }
 
 .full-width .site-inner, .site-inner {
-max-width: none;
-}
+  max-width: none; }
 
 @media only screen and (max-width: 1023px) {
-.full-width .site-inner { padding-left: 0%; padding-right: 0%; }
-.site-inner{max-width: none;}
-}
+  .full-width .site-inner {
+    padding-left: 0%;
+    padding-right: 0%; }
 
+  .site-inner {
+    max-width: none; } }
+/*Logo on top of Primary Nav
+------------------------------------- */
+.site-inner {
+  padding-top: 80px;
+  padding-top: 8rem; }
+
+.header-image .site-description {
+  display: none;
+  height: 0; }
+
+.header-image .site-header,
+.header-image .site-header .wrap {
+  background: none;
+  padding: 0; }
+
+.header-image .site-title a {
+  float: left;
+  min-height: 75px;
+  background: url(images/logos/logo.png) no-repeat left;
+  background-size: contain;
+  padding: 0;
+  display: block;
+  position: fixed;
+  width: 360px;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.resize-logo {
+  background-size: contain !important;
+  min-height: 40px !important;
+  background-image: url(images/logos/logo-sm.png) !important;
+  min-height: 60px;
+  width: 100%; }
+
+.site-header {
+  min-height: 0; }
+
+.site-header .widget-area {
+  display: none;
+  height: 0; }
+
+/* Primary Navigation */
+.nav-primary {
+  background-color: #fff;
+  margin-top: 0px;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  height: 110px;
+  -webkit-transition: all 0.1s ease-in-out;
+  -moz-transition: all 0.1s ease-in-out;
+  -ms-transition: all 0.1s ease-in-out;
+  -o-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+  -webkit-box-shadow: 0 1px 1px #eee;
+  -moz-box-shadow: 0 1px 1px #eee;
+  -ms-box-shadow: 0 1px 1px #eee;
+  -o-box-shadow: 0 1px 1px #eee;
+  box-shadow: 0 1px 1px #eee;
+  border-collapse: separate; }
+
+.nav-primary .genesis-nav-menu a {
+  text-transform: uppercase;
+  color: #333333; }
+
+.nav-primary .genesis-nav-menu a:hover, .nav-primary .genesis-nav-menu a:focus, .nav-primary .genesis-nav-menu .current-menu-item > a {
+  color: #26b7c2;
+  text-decoration: none; }
+
+.nav-primary.shrink {
+  height: 70px;
+  padding: 0;
+  -webkit-transition: all 0.5s ease-in-out;
+  -moz-transition: all 0.5s ease-in-out;
+  -ms-transition: all 0.5s ease-in-out;
+  -o-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out; }
+
+.nav-primary .genesis-nav-menu {
+  float: right;
+  width: auto;
+  margin-left: 360px; }
+
+.nav-primary .genesis-nav-menu .menu-item {
+  float: left; }
+
+.nav-secondary {
+  margin-top: 40px; }
+
+/*# sourceMappingURL=custom.css.map */

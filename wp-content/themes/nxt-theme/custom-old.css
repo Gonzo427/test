@@ -1,0 +1,80 @@
+/* Front Page Template for Full Width Sections
+-------------------------------------------- */
+body{
+
+}
+.home .site-inner {
+	max-width: none;
+	padding-top: 0;
+}
+
+.entry {
+background-color:transparent;
+}
+
+.full-width .site-inner, .site-inner {
+max-width: none;
+}
+
+@media only screen and (max-width: 1023px) {
+.full-width .site-inner { padding-left: 0%; padding-right: 0%; }
+.site-inner{max-width: none;}
+}
+
+
+
+
+/*Logo on top of Primary Nav
+------------------------------------- */
+.site-inner {
+	padding-top: 80px;
+	padding-top: 8rem;
+}
+
+.header-image .site-description {
+	display: none;
+	height: 0;
+}
+
+.header-image .site-header,
+.header-image .site-header .wrap {
+	background: none;
+	padding: 0;
+}
+
+.header-image .site-title a {
+	float: left;
+	min-height: 164px;
+	background: url(images/logos/logo.png) no-repeat left;
+	background-size: contain;
+	padding: 0;
+	display: block;
+	top: 40px;
+	position: absolute;
+	width: 360px;
+}
+
+.site-header .widget-area {
+	display: none;
+	height: 0;
+}
+
+/* Primary Navigation */
+.nav-primary {
+	background-color: #fff;
+	margin-top: 0px;
+}
+
+.nav-primary .genesis-nav-menu {
+	float: right;
+	width: auto;
+	margin-left: 360px;
+}
+
+.nav-primary .genesis-nav-menu .menu-item {
+	float: left;
+}
+
+.nav-secondary {
+	margin-top: 40px;
+}

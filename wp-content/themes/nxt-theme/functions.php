@@ -9,6 +9,9 @@ add_theme_support( 'genesis-responsive-viewport' );
 add_theme_support( 'genesis-footer-widgets', 3 );
 //Add support for custom background
 add_theme_support( 'custom-background' );
+//* Reposition the primary navigation menu
+remove_action( 'genesis_after_header', 'genesis_do_nav' );
+add_action( 'genesis_before_header', 'genesis_do_nav' );
 
 }
 
@@ -32,3 +35,38 @@ function sp_footer_creds_filter( $creds ) {
 	$creds = '[footer_copyright] &middot; <a href="http://mydomain.com">My Custom Link</a> &middot; ';
 	return $creds;
 }
+
+
+
+/** Remove jQuery and jQuery-ui scripts loading from header */
+add_action('wp_enqueue_scripts', 'crunchify_script_remove_header');
+function crunchify_script_remove_header() {
+      wp_deregister_script( 'jquery' );
+      wp_deregister_script( 'jquery-ui' );
+}
+ 
+/** Load jQuery and jQuery-ui script just before closing Body tag */
+add_action('genesis_after_footer', 'crunchify_script_add_body');
+function crunchify_script_add_body() {
+      wp_register_script( 'jquery', 'http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js', false, null);
+      wp_enqueue_script( 'jquery');
+      
+      wp_register_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', false, null);
+      wp_enqueue_script( 'jquery-ui');
+
+      wp_register_script( 'jquery-ui', 'http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js', false, null);
+      wp_enqueue_script( 'jquery-ui');
+}
+/** Add Custom Scripts */
+add_action( 'wp_enqueue_scripts', 'custom_scripts' );
+function custom_scripts() {
+    wp_enqueue_script( 'customscript', get_stylesheet_directory_uri() . '/js/shrink-header.js', array( 'jquery' ), '', true );
+}
+
+/* add new section on home page: */
+
+add_action( 'genesis_before_loop', 'wpsites_after_header' );
+function wpsites_after_header() {
+echo'This text has been added using the genesis_before_loop hook';
+}
+
